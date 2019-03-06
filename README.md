@@ -24,7 +24,7 @@ private String getDateFormat(String stDate, String currentFormat, String reqForm
 
 spring  scheduler:
 
-@Scheduled(cron = "${mpl.scheduler.cron}", zone="${mpl.scheduler.timezone}")
+@Scheduled(cron = "${data.scheduler.cron}", zone="${data.scheduler.timezone}")
 
     cron: "1 5 8 * * THU"
     timezone: America/New_York
