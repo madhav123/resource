@@ -1,2 +1,20 @@
 hyd: india-test
 lahore: pak
+
+
+OSGi :
+
+OSGi (Open Service Gateway Initiative) is a Java framework for developing and deploying modular software programs and libraries. 
+OSGi has two parts. 
+The first part is a specification for modular components called bundles,
+which are commonly referred to as plug-ins.
+
+EIP:
+
+Apache Camel is a versatile Java-based open source enterprise service bus and supports most of the Enterprise 
+Integration Patterns (EIP). Camel is also known as a routing and mediation engine as it 
+effectively routes data between endpoints, while taking heavy loads like transformation of data formats,
+endpoint connectivity, and much more. Apache Camel provides support for bean binding and seamless integration with popular
+frameworks such as CDI, Spring, Blueprint, and Guice. Camel empowers you to write rules and meditation in a variety of 
+domain-specific languages (DSL) including Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL. 
+Apache Camel uses URIs to work directly with any kind of Transport or messaging model such as HTTP, ActiveMQ, JMS, JBI, SCA, MINA, or CXF, as well as pluggable components and data format options.
