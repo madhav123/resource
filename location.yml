@@ -17,4 +17,12 @@ effectively routes data between endpoints, while taking heavy loads like transfo
 endpoint connectivity, and much more. Apache Camel provides support for bean binding and seamless integration with popular
 frameworks such as CDI, Spring, Blueprint, and Guice. Camel empowers you to write rules and meditation in a variety of 
 domain-specific languages (DSL) including Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL. 
-Apache Camel uses URIs to work directly with any kind of Transport or messaging model such as HTTP, ActiveMQ, JMS, JBI, SCA, MINA, or CXF, as well as pluggable components and data format options.
+Apache Camel uses URIs to work directly with any kind of Transport or messaging model such as HTTP, ActiveMQ, JMS, JBI, SCA, MINA, 
+or CXF, as well as pluggable components and data format options.
+
+BRMS:
+
+Drools is a Business Rules Management System (BRMS) solution. It provides a core Business Rules Engine (BRE),
+a web authoring and rules management application (Drools Workbench), full runtime support for Decision Model and Notation (DMN) 
+models at Conformance level 3 and an Eclipse IDE plugin for core development.
+
