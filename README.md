@@ -49,4 +49,21 @@ JobExecution jef = jobLauncher.run(importUserJob(S3, versionId, file1feedCount,f
 				.reader(flatFileReaderForfile1(secureAmazonS3, versionId,             feedcount)).processor(processorfile2())
 				.writer(writerfile1SchemaList()).build();
 	}							
-								
+		
+		
+		
+Flat file reader:
+
+public FlatFileItemReader<ModelData> customreader(s3 s, int versionId,
+			int feedcount) {
+		FlatFileItemReader<ModelData> reader = new FlatFileItemReader<ModelData>();
+		
+		bucketObj = s.getObject(config.getBucketName(), config.getfile());
+		inputStream = bucketObj.getObjectContent();
+		// local test start
+		reader.setResource(new InputStreamResource(inputStream));
+		// reader.setLinesToSkip(1); // To skip the header in the file
+		reader.setLineMapper(new customerLineMapper(versionId, feedcount));
+		return reader;
+	}
+
