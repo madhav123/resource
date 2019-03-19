@@ -67,3 +67,25 @@ public FlatFileItemReader<ModelData> customreader(s3 s, int versionId,
 		return reader;
 	}
 
+
+
+=================================================================================
+
+
+create Data source for jdbctemplate:
+https://kodejava.org/how-do-i-create-a-data-source-object-for-jdbctemplate
+
+
+private static DataSource getDataSource() {
+        // Creates a new instance of DriverManagerDataSource and sets
+        // the required parameters such as the Jdbc Driver class,
+        // Jdbc URL, database user name and password.
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(DataSourceDemo.DRIVER);
+        dataSource.setUrl(DataSourceDemo.JDBC_URL);
+        dataSource.setUsername(DataSourceDemo.USERNAME);
+        dataSource.setPassword(DataSourceDemo.PASSWORD);
+        return dataSource;
+    }
+    
+ -------------------------------------------------------------------------------------   
