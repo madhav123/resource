@@ -88,4 +88,7 @@ private static DataSource getDataSource() {
         return dataSource;
     }
     
- -------------------------------------------------------------------------------------   
+ -------------------------------------------------------------------------------------  
+ ORA-12505 :TNS listener does not currently know of SID given in connect descriptor
+ 
+ https://stackoverflow.com/questions/30861061/ora-12505-tns-listener-does-not-currently-know-of-sid-given-in-connect-descript
