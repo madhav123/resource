@@ -20,6 +20,22 @@ private String getDateFormat(String stDate, String currentFormat, String reqForm
 		logger.info(ivaProperties.getMethodExit() + "getDateFormat");
 		return reqDate;
 	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SimpleDateFormat df = new SimpleDateFormat("MM-dd-yy");
+		Date startDate;
+		try {
+			startDate = df.parse("06-22-2010");
+			df.applyPattern("dd-MMM-yy");
+			String reqDate = df.format(startDate);
+			System.out.println(reqDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 =========================================================================================
 
 spring  scheduler:
