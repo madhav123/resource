@@ -113,3 +113,8 @@ private static DataSource getDataSource() {
  
  https://stackoverflow.com/questions/26875050/behaviour-of-hikari-setconnectiontimeout
  
+ Preparestatementsetter:
+ 
+ https://www.tutorialspoint.com/springjdbc/springjdbc_preparedstatementsetter.htm
+ 
+ 
