@@ -118,3 +118,36 @@ private static DataSource getDataSource() {
  https://www.tutorialspoint.com/springjdbc/springjdbc_preparedstatementsetter.htm
  
  
+ 
+ spring boot test case for web :
+ 
+ Api calss:
+ 
+@RunWith(SpringRunner.class)
+@WebMvcTest(value = APIcLASS.class)
+@ContextConfiguration(classes = ApplicaitonCalss.class)
+
+
+Api calss
+	@Autowired
+	private MockMvc mockMvc;
+	M1(){
+	
+	MvcResult result = mockMvc.perform(post("/api/v1_0/l").contentType(MediaType.APPLICATION_JSON)
+				.content(gson.toJson(reatuesData))).andReturn();
+		RespnoeData response = new ObjectMapper().readValue(result.getResponse().getContentAsString(),
+				ResponeData.class);
+
+}
+ }
+ 
+ 
+ Service class:
+ 
+ @RunWith(SpringRunner.class)
+@WebMvcTest(value = apiclass.class)
+@ContextConfiguration(classes = { Applicaiton.class, properties.class })
+
+
+
+ 
