@@ -1,4 +1,8 @@
 # resource
+Query timeout:
+
+https://community.oracle.com/message/15109594#15109594
+
 
 private String getDateFormat(String stDate, String currentFormat, String reqFormat, List<String> invalidDates) {
 		logger.info(ivaProperties.getMethodEntry() + "getDateFormat");
