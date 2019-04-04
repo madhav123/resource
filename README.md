@@ -153,5 +153,11 @@ Api calss
 @ContextConfiguration(classes = { Applicaiton.class, properties.class })
 
 
+Excepiton Test case:
+
+Mockito.when(service.getmethod(Mockito.anyObject()))
+	.thenThrow(new customExcepiton("Middleware Serice Down"));
+	
+	
 
  
