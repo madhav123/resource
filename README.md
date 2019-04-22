@@ -1,3 +1,13 @@
+# decemial format:
+
+                DecimalFormat dd=new DecimalFormat("#0.00");
+		System.out.println("d3====="+ dd.format(d3));
+#BigDecimal precesion scale
+
+               BigDecimal bg=new BigDecimal(d3);
+		bg.setScale(2, RoundingMode.HALF_UP);				
+		System.out.println("d3-----="+ bg.doubleValue());
+
 # resource
 Query timeout:
 
