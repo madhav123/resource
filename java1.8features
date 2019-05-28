@@ -43,3 +43,18 @@ java Reactive programing:
 Useful links:
 
 https://www.javacodegeeks.com/2016/06/spring-reactive-samples.html
+
+How do I go reactive in Java?
+
+With its latest releases (starting with Java 8), Java itself has made some attempts to introduce built-in reactivity, 
+yet these attempts are not very popular with developers to date. But there’re some live and regularly updated third-party
+implementations for reactive programming in Java that help to save the day and thus are particularly loved and cherished by 
+Java developers.
+
+RxJava was the first Reactive Extension API specific for the Java platform. It works with Java 6 and provides an opportunity 
+to write asynchronous, event-based programs for both Java and Android Java, which is very convenient.
+
+Spring Reactor is another framework for Java from Spring developers. It is quite similar to RxJava but has simpler abstraction.
+The framework has managed to win popularity due to the possibility to leverage benefits of Java 8.
+
+
