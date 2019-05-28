@@ -1,0 +1,25 @@
+Java functional interfaces:
+
+Ex:
+
+package madhav;
+@FunctionalInterface
+public interface Sample {
+ String getName(String name);
+}
+
+
+package madhav;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.out.println("sampleTest");
+Sample s=(String x)->x+x;
+String name=s.getName("test--");
+System.out.println(name);
+
+	}
+
+}
