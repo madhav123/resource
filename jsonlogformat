@@ -38,7 +38,7 @@ logback.xml
 </configuration>
 
 
-NamedArgumentJsonProvider.java
+CustomJsonProvider.java
 ----------------------------------------
 
 public class CustomJsonProvider extends AbstractJsonProvider<LoggingEvent> {
