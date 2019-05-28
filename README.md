@@ -1,3 +1,12 @@
+
+
+java_buildpack_offline:
+
+memory: 1G
+disk_quota: 1G
+buildpack: java_buildpack_offline
+
+
 #Spring batch paraller processing 
 
 https://github.com/spring-projects/spring-batch/blob/master/spring-batch-docs/asciidoc/scalability.adoc
