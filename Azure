@@ -14,5 +14,5 @@ Writing to log files.
 Storing data for backup and restore, disaster recovery, and archiving.
 Storing data for analysis by an on-premises or Azure-hosted service.
 
-Java API for connecti with Azure BOLB.
+Java API for connect with Azure BOLB.
 https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart.git
