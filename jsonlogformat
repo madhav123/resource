@@ -1,0 +1,72 @@
+Display logs in json format:
+
+
+
+<configuration> 
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+	<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder"> 
+	<providers> 
+	<pattern>
+	<pattern>
+	{
+	"className":"%c",
+	"methodName":"%M", 
+	"lineNo":"%L",
+	"level":"%-5p",
+	"eventTime": "%d",
+	"message": "%m",
+	"error":"%ex",
+	"springProfile": "${spring.profiles.active}" 
+	}
+	</pattern>
+	</pattern>
+	<mdc /> 
+	<arguments/> 
+             <logstashMarkers/>
+           <provider class="net.logstash.logback.composite.loggingevent.ArgumentsJsonProvider" />
+           <provider class="custom.util.NamedArgumentJsonProvider" />                  
+            </providers> 
+	</encoder> 
+	</appender>
+
+	<logger name="jsonLogger" additivity="false" level="INFO">
+	<appender-ref ref="consoleAppender" />
+	</logger>
+	<root level="INFO">
+	<appender-ref ref="consoleAppender" />
+	</root> 
+</configuration>
+
+
+NamedArgumentJsonProvider.java
+----------------------------------------
+
+public class NamedArgumentJsonProvider extends AbstractJsonProvider<LoggingEvent> {
+
+	
+//	@Autowired
+//	Properties properties;
+
+
+
+	@Override
+	public void writeTo(JsonGenerator generator, LoggingEvent event) {
+	
+		try {
+			if (null != event.getArgumentArray()) {
+
+				for (Object argument : event.getArgumentArray()) {
+					if (argument != null) {
+						generator.writeFieldName(argument.getClass().getSimpleName());
+						generator.writeObject(argument);
+					}
+				}
+			}
+		} catch (Exception e) {
+			
+		}
+	
+	}
+}
+
+
