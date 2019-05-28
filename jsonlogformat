@@ -1,6 +1,6 @@
 Display logs in json format:
 
-
+logback.xml
 
 <configuration> 
 	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
@@ -24,7 +24,7 @@ Display logs in json format:
 	<arguments/> 
              <logstashMarkers/>
            <provider class="net.logstash.logback.composite.loggingevent.ArgumentsJsonProvider" />
-           <provider class="custom.util.NamedArgumentJsonProvider" />                  
+           <provider class="custom.util.CustomJsonProvider" />                  
             </providers> 
 	</encoder> 
 	</appender>
@@ -41,7 +41,7 @@ Display logs in json format:
 NamedArgumentJsonProvider.java
 ----------------------------------------
 
-public class NamedArgumentJsonProvider extends AbstractJsonProvider<LoggingEvent> {
+public class CustomJsonProvider extends AbstractJsonProvider<LoggingEvent> {
 
 	
 //	@Autowired
