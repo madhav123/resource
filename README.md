@@ -1,4 +1,8 @@
 
+Excel Find the text:
+
+https://www.extendoffice.com/documents/excel/1783-excel-remove-text-before-character.html
+
 Need to update the below Ui Technologies:
 
 
