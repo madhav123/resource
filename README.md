@@ -1,4 +1,5 @@
 Query Param Example:
+
 https://www.mkyong.com/webservices/jax-rs/jax-rs-queryparam-example/
 
 
