@@ -1,3 +1,9 @@
+
+Julian Date:
+
+https://community1.pega.com/community/pega-product-support/question/how-covert-julian-date-normal-date-format%C2%A0-example
+
+
 Set query Params to RestTemplate:
 
 https://stackoverflow.com/questions/8297215/spring-resttemplate-get-with-parameters
