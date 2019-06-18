@@ -1,3 +1,7 @@
+Set query Params to RestTemplate:
+
+https://stackoverflow.com/questions/8297215/spring-resttemplate-get-with-parameters
+
 Query Param Example:
 
 https://www.mkyong.com/webservices/jax-rs/jax-rs-queryparam-example/
