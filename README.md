@@ -1,5 +1,17 @@
+Find Days between two dates:
 
-Julian Date:
+
+	                date = fmt1.parse(input);		
+			System.out.println("date=" + date);
+		        DateFormat fmt2 = new SimpleDateFormat("MM/dd/yyyy");
+		        String output = fmt2.format(date);
+		    
+		        Date currentDate = Calendar.getInstance().getTime();
+
+			long diffInMillies = Math.abs(currentDate.getTime() - date.getTime());
+			long diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+			
+
 
 https://community1.pega.com/community/pega-product-support/question/how-covert-julian-date-normal-date-format%C2%A0-example
 
