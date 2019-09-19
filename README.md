@@ -1,3 +1,27 @@
+Proxy setting:
+
+		 ReactorResourceFactory reactorResourceFactory = new ReactorResourceFactory();
+	        reactorResourceFactory.setUseGlobalResources(true);;
+	        reactorResourceFactory.afterPropertiesSet();
+	    
+		 
+	        return new ReactorClientHttpConnector(reactorResourceFactory, httpClient -> httpClient.tcpConfiguration(tcpClient -> {
+	            try {
+	                final SslContext sslContext = SslContextBuilder.forClient()
+	                        .build();
+	                tcpClient.secure(t -> t.sslContext(sslContext))
+	                        .option(ChannelOption.SO_KEEPALIVE, false)
+	                        .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 5_000);
+	                tcpClient = tcpClient.proxy(proxy -> proxy.type(ProxyProvider.Proxy.HTTP).host("phoendcsrvproxy.gdn.syfbank.com").port(8080).build());
+	                return tcpClient;
+	            } catch (final SSLException ex) {
+	                throw new IllegalStateException("Unable to create SSL context", ex);
+	            }
+	        }));
+	        
+	        
+		
+
 Json Vs Bson
 -----------------------------------------
 JSON
