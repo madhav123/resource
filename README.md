@@ -1,3 +1,16 @@
+Difference between HashMap and ConcurrentHashMap
+
+HashMap is the Class which is under Traditional Collection and ConcurrentHashMap is a Class which is under Concurrent Collections, apart from this there are various differences between them which are:
+
+HashMap is non-Synchronized in nature i.e. HashMap is not Thread-safe whereas ConcurrentHashMap is Thread-safe in nature.
+HashMap performance is relatively high because it is non-synchronized in nature and any number of threads can perform simultaneously. But ConcurrentHashMap performance is low sometimes because sometimes Threads are required to wait on ConcurrentHashMap.
+While one thread is Iterating the HashMap object, if other thread try to add/modify the contents of Object then we will get Run-time exception saying ConcurrentModificationException.Whereas In ConcurrentHashMap we wont get any exception while performing any modification at the time of Iteration.
+
+
+Spring Boot fallback model:
+
+https://github.com/Netflix/Hystrix/wiki/Configuration#intro
+
 Proxy setting:
 
 		 ReactorResourceFactory reactorResourceFactory = new ReactorResourceFactory();
