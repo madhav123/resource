@@ -1,3 +1,11 @@
+Spring Rest ignore propery from response object:
+
+Ex:
+
+@JsonInclude(Include.NON_NULL)
+private String name;
+
+
 React js practice through online:
 
 
