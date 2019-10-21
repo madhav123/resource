@@ -1,3 +1,15 @@
+.gitignore file content--
+
+
+target
+.classpath
+.project
+.settings
+bin
+
+
+
+
 Spring Rest ignore propery from response object:
 
 Ex:
