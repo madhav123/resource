@@ -1,3 +1,17 @@
+Cresate config server:
+
+{
+"count":1,
+"git":
+{
+"password":"sample", 
+"uri":"sample.com/configuration.git",
+"label":"feature/sample_version","username":"sample"
+}
+}
+
+
+
 Mysql cup service :
 
 
