@@ -1,3 +1,29 @@
+Mysql cup service :
+
+
+
+
+cf cups UP_SQL_Sample -p samplefile.json
+
+
+samplefile.json
+
+
+{
+  "dbname":"sample",
+  "host":"sample.com",
+  "port":"1123",
+  "username":"sample",
+  "password":"sample",
+  "driverClassName":"com.mysql.jdbc.Driver", 
+  "uri":"sample",
+  "useSSL":"false" 
+
+}
+
+
+
+
 .gitignore file content--
 
 
