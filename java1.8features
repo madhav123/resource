@@ -1,4 +1,11 @@
-Java Method reference:
+Java Stream Filter
+Java stream provides a method filter() to filter stream elements on the basis of given predicate. Suppose you want to get only even elements of your list then you can do this easily with the help of filter method.
+
+This method takes predicate as an argument and returns a stream of consisting of resulted elements.
+
+
+
+
 
 Java Method References
 Java provides a new feature called method reference in Java 8. Method reference is used to refer method of functional interface. It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference. In this tutorial, we are explaining method reference concept in detail.
