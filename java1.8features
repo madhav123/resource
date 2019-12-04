@@ -1,3 +1,22 @@
+program for reverse the string:
+
+Ex:
+
+package interviewprograms;
+
+public class ReverseTheString {
+    public static void main(String argc[]){
+        String name="Madhava Rao";
+
+        for(int i=name.length()-1;i>=0;i--){
+            System.out.print(name.charAt(i));
+        }
+    }
+}
+
+----------------------------------------------
+
+
 Program to find missing string :
 
 Ex: program
@@ -26,7 +45,7 @@ public class FindMissingString {
 
     }
 
-
+---------------------------------------
 
 Java Collectors
 	Collectors is a final class that extends Object class. It provides reduction operations, such as accumulating elements into collections, summarizing elements according to various criteria, etc.
