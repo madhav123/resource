@@ -1,3 +1,26 @@
+Anonymous Inner classed:
+
+package innterclassed;
+
+public abstract  class Person {
+    abstract void eat();
+}
+
+
+package innterclassed;
+
+public class TestAnonymousInner {
+    public static void main(String args[]){
+        Person p=new Person(){
+            void eat(){System.out.println("nice fruits");}
+        };
+        p.eat();
+    }
+}
+
+
+-------------------------------------------------------------------------
+
 Inner class refered from outerworld:
 
 Ex:
