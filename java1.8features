@@ -1,3 +1,52 @@
+Inner class refered from outerworld:
+
+Ex:
+
+package innterclassed;
+
+public class School {
+    String schoolName;
+
+    public School(String schoolName){
+        this.schoolName=schoolName;
+    }
+
+    public void displayStudentdetails(){
+        Student s=new Student(1,"hyd",schoolName);
+        System.out.print("name=" + s.schoolName);
+    }
+
+    class Student{
+        int id;
+        String address;
+        String schoolName;
+
+        public Student(int id,String address,String schoolName){
+            this.id=id;
+            this.address=address;
+            this.schoolName=schoolName;
+        }
+    }
+
+}
+
+
+package innterclassed;
+
+public class InnerClassesEx {
+    public static void main(String agrc[]){
+        School s=new School("Bhel");
+        School.Student stu=s.new Student(34,"df","df");
+        s.displayStudentdetails();
+
+
+
+    }
+
+}
+
+------------------------------------------------------------------------
+
 program to define Enums with constructor:
 
 Ex:
