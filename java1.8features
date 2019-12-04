@@ -1,3 +1,33 @@
+Program to find missing string :
+
+Ex: program
+
+package interviewprograms;
+
+public class FindMissingString {
+    public static void main(String argc[]){
+       // System.out.print("This is madhav");
+
+        String actualString= "Madhava2b rao";
+        String toCompareString="Madhava";
+        int i=0;
+
+                    for (i = 0; i <= actualString.length() - 1; i++) {
+                        if (toCompareString.indexOf(actualString.charAt(i), i) > 0) {
+                            if (!(actualString.charAt(i) == toCompareString.charAt(i))) {
+                                System.out.print(actualString.charAt(i));
+                            }
+                        }else {
+                            System.out.print(actualString.charAt(i));
+                        }
+                    }
+
+                }
+
+    }
+
+
+
 Java Collectors
 	Collectors is a final class that extends Object class. It provides reduction operations, such as accumulating elements into collections, summarizing elements according to various criteria, etc.
 
