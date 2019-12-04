@@ -1,3 +1,46 @@
+Clone example:
+
+package cloningexamples;
+
+public class Student implements Cloneable {
+    int id;
+    String name;
+
+    public void createStudent(int id,String name){
+        this.id=id;
+        this.name=name;
+
+    }
+
+    public Object clone()throws CloneNotSupportedException{
+        return (Student)super.clone();
+    }
+}
+package cloningexamples;
+
+public class CloneTest {
+    public static void main(String argc[]) {
+        Student student1=new Student();
+        student1.createStudent(1,"madhav");
+        System.out.print("name=" + student1.name);
+
+        //after cloning
+        try {
+            Student student2 = (Student) student1.clone();
+            student2.name="nare";
+            System.out.print(" from s2name=" + student2);
+            System.out.print(" from s1name=" + student1);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+}
+
+--------------------------------------------------------------
+
+
+
 Anonymous Inner classed:
 
 package innterclassed;
