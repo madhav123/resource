@@ -1,3 +1,50 @@
+program to define Enums with constructor:
+
+Ex:
+
+package enumsexamples;
+
+enum countries{
+    INDIA(2,"hyd"),PAK(3,"pech"),CHINA(4,"ching");
+    int id;
+    String city;
+    countries(int id,String city){
+        System.out.println("constructor called")   ;
+        this.id=id;
+        this.city=city;
+    }
+
+
+}
+
+ class student{
+    int id;
+    String name;
+    String country;
+
+    public void create(int id,String name,String country){
+        this.id=id;
+        this.name=name;
+        this.country=country;
+    }
+
+
+
+}
+public class EnumEx1 {
+    public static void main(String argc[]){
+        countries cc=  countries.INDIA;
+        student ss=new student();
+        ss.create(2,cc.city, cc.name());
+        System.out.print("student=" + ss.country);
+        System.out.print("city=" + ss.name);
+    }
+
+}
+
+
+-------------------------------------------------------------------------------
+
 program for reverse the string:
 
 Ex:
