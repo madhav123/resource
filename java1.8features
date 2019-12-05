@@ -1,3 +1,30 @@
+forEach Example program:
+
+package filtersex;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ForEatchEx  {
+    public  static  void  main(String argc[]){
+        System.out.print("Filters test");
+
+        List<String> names=new ArrayList<>();
+        names.add("madhav");
+        names.add("rao");
+        names.add("nare");
+        names.add("babu");
+
+        names.forEach(i -> {
+            System.out.println(i);
+            System.out.println( i + " Testing");
+                }
+        );
+    }
+}
+
+----------------------------------------------------------------
+
 Clone example:
 
 package cloningexamples;
