@@ -1,1 +1,17 @@
-Spring Boot
+Spring Boot:
+
+Application Runner:
+Application Runner is an interface used to execute the code after the Spring Boot application started. 
+The example given below shows how to implement the Application Runner interface on the main class file
+
+Example:
+@SpringBootApplication
+public class DemoApplication implements ApplicationRunner {
+   public static void main(String[] args) {
+      SpringApplication.run(DemoApplication.class, args);
+   }
+   @Override
+   public void run(ApplicationArguments arg0) throws Exception {
+      System.out.println("Hello World from Application Runner");
+   }
+}
