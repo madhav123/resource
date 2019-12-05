@@ -74,4 +74,15 @@ RESTful web services should support the Cross-Origin Resource Sharing.
 RESTful web service application should allow accessing the API(s) from the 8080 port.
 
 
+├────────────┼─────────────────────────────────────────────────────┤
+│ @Component │ generic stereotype for any Spring-managed component │
+│ @Repository│ stereotype for persistence layer                    │
+│ @Service   │ stereotype for service layer                        │
+│ @Controller│ stereotype for presentation layer (spring-mvc)  
+
+
+
+
+
+
 
