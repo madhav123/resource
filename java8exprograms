@@ -1,1 +1,368 @@
 
+forEach Example program:
+
+package filtersex;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ForEatchEx  {
+    public  static  void  main(String argc[]){
+        System.out.print("Filters test");
+
+        List<String> names=new ArrayList<>();
+        names.add("madhav");
+        names.add("rao");
+        names.add("nare");
+        names.add("babu");
+
+        names.forEach(i -> {
+            System.out.println(i);
+            System.out.println( i + " Testing");
+                }
+        );
+    }
+}
+
+----------------------------------------------------------------
+
+Clone example:
+
+package cloningexamples;
+
+public class Student implements Cloneable {
+    int id;
+    String name;
+
+    public void createStudent(int id,String name){
+        this.id=id;
+        this.name=name;
+
+    }
+
+    public Object clone()throws CloneNotSupportedException{
+        return (Student)super.clone();
+    }
+}
+package cloningexamples;
+
+public class CloneTest {
+    public static void main(String argc[]) {
+        Student student1=new Student();
+        student1.createStudent(1,"madhav");
+        System.out.print("name=" + student1.name);
+
+        //after cloning
+        try {
+            Student student2 = (Student) student1.clone();
+            student2.name="nare";
+            System.out.print(" from s2name=" + student2);
+            System.out.print(" from s1name=" + student1);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+}
+
+--------------------------------------------------------------
+
+
+
+Anonymous Inner classed:
+
+package innterclassed;
+
+public abstract  class Person {
+    abstract void eat();
+}
+
+
+package innterclassed;
+
+public class TestAnonymousInner {
+    public static void main(String args[]){
+        Person p=new Person(){
+            void eat(){System.out.println("nice fruits");}
+        };
+        p.eat();
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+Inner class refered from outerworld:
+
+Ex:
+
+package innterclassed;
+
+public class School {
+    String schoolName;
+
+    public School(String schoolName){
+        this.schoolName=schoolName;
+    }
+
+    public void displayStudentdetails(){
+        Student s=new Student(1,"hyd",schoolName);
+        System.out.print("name=" + s.schoolName);
+    }
+
+    class Student{
+        int id;
+        String address;
+        String schoolName;
+
+        public Student(int id,String address,String schoolName){
+            this.id=id;
+            this.address=address;
+            this.schoolName=schoolName;
+        }
+    }
+
+}
+
+
+package innterclassed;
+
+public class InnerClassesEx {
+    public static void main(String agrc[]){
+        School s=new School("Bhel");
+        School.Student stu=s.new Student(34,"df","df");
+        s.displayStudentdetails();
+
+
+
+    }
+
+}
+
+------------------------------------------------------------------------
+
+program to define Enums with constructor:
+
+Ex:
+
+package enumsexamples;
+
+enum countries{
+    INDIA(2,"hyd"),PAK(3,"pech"),CHINA(4,"ching");
+    int id;
+    String city;
+    countries(int id,String city){
+        System.out.println("constructor called")   ;
+        this.id=id;
+        this.city=city;
+    }
+
+
+}
+
+ class student{
+    int id;
+    String name;
+    String country;
+
+    public void create(int id,String name,String country){
+        this.id=id;
+        this.name=name;
+        this.country=country;
+    }
+
+
+
+}
+public class EnumEx1 {
+    public static void main(String argc[]){
+        countries cc=  countries.INDIA;
+        student ss=new student();
+        ss.create(2,cc.city, cc.name());
+        System.out.print("student=" + ss.country);
+        System.out.print("city=" + ss.name);
+    }
+
+}
+
+
+-------------------------------------------------------------------------------
+
+program for reverse the string:
+
+Ex:
+
+package interviewprograms;
+
+public class ReverseTheString {
+    public static void main(String argc[]){
+        String name="Madhava Rao";
+
+        for(int i=name.length()-1;i>=0;i--){
+            System.out.print(name.charAt(i));
+        }
+    }
+}
+
+----------------------------------------------
+
+
+Program to find missing string :
+
+Ex: program
+
+package interviewprograms;
+
+public class FindMissingString {
+    public static void main(String argc[]){
+       // System.out.print("This is madhav");
+
+        String actualString= "Madhava2b rao";
+        String toCompareString="Madhava";
+        int i=0;
+
+                    for (i = 0; i <= actualString.length() - 1; i++) {
+                        if (toCompareString.indexOf(actualString.charAt(i), i) > 0) {
+                            if (!(actualString.charAt(i) == toCompareString.charAt(i))) {
+                                System.out.print(actualString.charAt(i));
+                            }
+                        }else {
+                            System.out.print(actualString.charAt(i));
+                        }
+                    }
+
+                }
+
+    }
+
+---------------------------------------
+
+Java Collectors
+	Collectors is a final class that extends Object class. It provides reduction operations, such as accumulating elements into collections, summarizing elements according to various criteria, etc.
+
+Java Collectors class provides various methods to deal with elements
+
+Ex:
+package Collectors;
+
+import java.util.List;
+import java.util.ArrayList;
+class Product {
+    int id;
+    String name;
+    float price;
+
+    public Product(int id, String name, float price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+}
+
+
+package Collectors;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+public class CollectorsExample {
+    public static void main(String[] args) {
+        List<Product> productsList = new ArrayList<Product>();
+        //Adding Products
+        productsList.add(new Product(1, "HP Laptop", 25000f));
+        productsList.add(new Product(2, "Dell Laptop", 30000f));
+        productsList.add(new Product(3, "Lenevo Laptop", 28000f));
+        productsList.add(new Product(4, "Sony Laptop", 28000f));
+        productsList.add(new Product(5, "Apple Laptop", 90000f));
+        List<Float> productPriceList =
+                productsList.stream()
+                        .map(x -> x.price)         // fetching price
+                        .collect(Collectors.toList());  // collecting as list
+        System.out.println(productPriceList);
+    }
+}
+
+Out put:
+[25000.0, 30000.0, 28000.0, 28000.0, 90000.0]
+
+
+
+
+Java Stream Filter
+Java stream provides a method filter() to filter stream elements on the basis of given predicate. Suppose you want to get only even elements of your list then you can do this easily with the help of filter method.
+
+This method takes predicate as an argument and returns a stream of consisting of resulted elements.
+
+
+
+
+
+Java Method References
+Java provides a new feature called method reference in Java 8. Method reference is used to refer method of functional interface. It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference. In this tutorial, we are explaining method reference concept in detail.
+
+Types of Method References
+There are following types of method references in java:
+
+1)Reference to a static method.
+
+2)Reference to an instance method.
+
+3)Reference to a constructor.
+
+
+public interface Sayable1 {
+    void say();
+}
+
+public class MethodReference1 {
+    public static void saySomething(){
+        System.out.println("Hello, this is static method.");
+    }
+    public static void main(String[] args) {
+        // Referring static method
+        Sayable1 sayable = MethodReference::saySomething;
+        // Calling interface method
+        sayable.say();
+    }
+}
+
+
+
+
+
+Java functional interfaces:
+
+Functional Interfaces In Java
+A functional interface is an interface that contains only one abstract method. They can have only one functionality to exhibit.
+From Java 8 onwards, lambda expressions can be used to represent the instance of a functional interface. 
+A functional interface can have any number of default methods. Runnable, ActionListener, 
+Comparable are some of the examples of functional interfaces.
+Before Java 8, we had to create anonymous inner class objects or implement these interfaces.
+
+
+@FunctionalInterface Annotation
+@FunctionalInterface annotation is used to ensure that the functional interface can’t have more than one abstract method. 
+In case more than one abstract methods are present, the compiler flags an ‘Unexpected @FunctionalInterface annotation’ message. 
+However, it is not mandatory to use this annotation.
+
+Ex:
+
+package madhav;
+@FunctionalInterface
+public interface Sample {
+ String getName(String name);
+}
+
+
+package madhav;
+
+public class Testing {
+
+public static void main(String[] args) {
+System.out.println("sampleTest");
+Sample s=(String x)->x+x;
+String name=s.getName("test--");
+System.out.println(name);
+
+	}
+
+}
