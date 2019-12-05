@@ -51,5 +51,14 @@ public class ProductServiceInterceptor implements HandlerInterceptor {
 }
 
 
+@Component
+public class ProductServiceInterceptorAppConfig extends WebMvcConfigurerAdapter {
+   @Autowired
+   ProductServiceInterceptor productServiceInterceptor;
 
+   @Override
+   public void addInterceptors(InterceptorRegistry registry) {
+      registry.addInterceptor(productServiceInterceptor);
+   }
+}
 
