@@ -6,4 +6,15 @@ In Java, we can find this behavior with iterators. Incase, you have called itera
 and another thread tries to modify the collection object, then concurrent modification exception will be thrown.
 This is called fail-fas .
 
+What is legacy class in java :
 
+Early versions of java did not include Collections framework. Instead it defined several classes and one interface to store objects. When collection came these classes reengineered to support the Collection interfaces. These old classes are known are legacy classes.
+ Following are the Legacy classes defined by Java.util package
+ 1 Dictionary
+ 2 HashTable
+ 3 Properties
+ 4 Stack
+ 5 Vector
+ There is only one legacy Interface called Enumeration.
+ 
+ 
