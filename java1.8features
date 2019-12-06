@@ -1,6 +1,13 @@
 
+Collections and Java Stream:
 
+A collection is an in-memory data structure to hold values and before we start using collection, 
+all the values should have been populated. Whereas a java Stream is a data structure that is computed on-demand.
 
+Java Stream doesn’t store data, it operates on the source data structure (collection and array) and produce pipelined 
+data that we can use and perform specific operations. Such as we can create a stream from the list and filter it based on a condition.
+
+--------------------------------------------------------------------------------------------------
 
 java Reactive programing:
 
