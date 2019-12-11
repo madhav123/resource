@@ -1,1 +1,8 @@
 
+Generate ssl Key:
+
+keytool -genkey -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
+
+ssl key example link:
+
+https://howtodoinjava.com/spring-boot/spring-boot-ssl-https-example/
