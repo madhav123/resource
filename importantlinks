@@ -17,3 +17,6 @@ Eureka Service registery example:
 https://www.tutorialspoint.com/spring_boot/spring_boot_service_registration_with_eureka.htm
 https://www.tutorialspoint.com/spring_boot/spring_boot_eureka_server.htm
 
+spring amqp help:
+
+https://docs.axoniq.io/reference-guide/extensions/spring-amqp
