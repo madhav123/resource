@@ -20,3 +20,6 @@ https://www.tutorialspoint.com/spring_boot/spring_boot_eureka_server.htm
 spring amqp help:
 
 https://docs.axoniq.io/reference-guide/extensions/spring-amqp
+
+CQRS turiorals:
+https://docs.axoniq.io/reference-guide/implementing-domain-logic/command-handling/aggregate
