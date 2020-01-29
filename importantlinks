@@ -36,3 +36,9 @@ traing:
 https://test-waveland.education.pivotal.io/cnd-course/index.html
 
 git update-index --chmod=+x gradlew
+
+crete service :
+
+cf create-service p.mysql db-small mydbtest3
+
+
