@@ -60,3 +60,11 @@ scripts/migrate-databases.sh: line 55: kill: (6638) - No such process
 The command "scripts/migrate-databases.sh pal-tracker2 ." failed and exited with 1 during .
 
 
+pcf memorey issues:
+
+has been compiled by a more recent version of the Java Runtime (class file version 55.0),
+this version of the Java Runtime only recognizes class file versions up to 52.0
+
+
+
+
